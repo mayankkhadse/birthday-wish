@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>🎉 Happy Birthday, Runzunn🫂 ! 🎉</h1>
+        <p id="message">Click the button to reveal a surprise!</p>
+        <button onclick="showWish()">Click Me!</button>
+              <!-- Single Click Me Button for Music Control -->
+              <button onclick="toggleMusic()" id="musicButton">🎶</button>
+        
+              <!-- Hidden Audio Element -->
+              <audio id="bdayMusic" loop>
+                  <source src="birthday_song.mp3" type="audio/mp3">
+              </audio>
+          </div>
+
+          <div class="cloud" style="top: 30%; left: 10%;"></div>
+          <div class="cloud" style="top: 60%; left: 20%;"></div>
+          <div class="cloud" style="top: 80%; left: 30%;"></div>
+          <div class="cloud" style="top: 90%; left: 70%;"></div>
+          <div class="cloud" style="top: 20%; left: 50%;"></div>
+          <div class="cloud" style="top: 40%; left: 60%;"></div>
+          <div class="cloud" style="top: 70%; left: 80%;"></div>
+
+          <!-- JavaScript for Cloud Randomization -->
+<script>
+    // Randomize Cloud Position and Animation Speed
+    window.onload = function() {
+        const clouds = document.querySelectorAll('.cloud');
+        
+        clouds.forEach(cloud => {
+            const randomTop = Math.random() * 100;  // Random vertical position
+            const randomDelay = Math.random() * 5;  // Random delay before animation starts
+            const randomSpeed = 5 + Math.random() * 10;  // Random speed
+            
+            cloud.style.top = `${randomTop}%`;
+            cloud.style.animationDuration = `${randomSpeed}s`; // Randomize speed
+            cloud.style.animationDelay = `${randomDelay}s`; // Randomize delay
+        });
+    };
+</script>
+
+
+      
+          <!-- JavaScript for Button Control -->
+          <script>
+              let music = document.getElementById("bdayMusic");
+              let button = document.getElementById("musicButton");
+      
+              function toggleMusic() {
+                  if (music.paused) {
+                      music.play();
+                      button.textContent = "🎶 ";
+                  } else {
+                      music.pause();
+                      button.textContent = "🎶";
+                  }
+              }
+          </script>
+        <div id="surprise" class="hidden">
+            <p>Wishing you a wonderful day filled with love ,laughter and all your hearted desires! 🎂</p>
+            <p>I Love You So Much</p>
+            <p>I wish I were with you on your special day but I can't. But soon we celebrate your bday toghether. </p>
+            <p>Ata jast ved lagat ahe english mdhe v4 krun lihacha .. Bhetu lvkrch.. Ithe mi mjhe 3 shabd smpvto-- I LOVE YOU ❤️❤️ </p>
+            <img src="cake.png" alt="Birthday Cake" />
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

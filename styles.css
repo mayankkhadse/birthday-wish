@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #7894f1, #aed270);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: float 20s ease-in-out infinite, horizontalMove 1s ease-in-out infinite;
+  
+    
+}
+
+
+
+@keyframes :horizontalMove {
+    0% { left: -150px; }
+    50% { left: 50%; transform: translateX(-50%);}
+    100% { left: 100%: }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
+
+/* Main Container */
+.container {
+    margin-top: 15%;
+}
+
+/* Animated Bouncing Heading */
+h1 {
+    color: #8e0475;
+    font-size: 3rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Button Styling with Hover Animation */
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #e91e63;
+}
+
+#musicButton {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f3f1fa;
+    color: rgb(16, 9, 114);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#musicButton:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(123, 144, 123, 0.5);
+}
+
+
+/* Surprise Section Styling */
+#surprise {
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Image Styling with Animation */
+img {
+    width: 400px;
+    border-radius: 20px;
+    border: 5px ;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade-in Effect for Surprise Section */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
